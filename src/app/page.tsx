@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Wallet, Landmark, HeadphonesIcon, ArrowLeft, ExternalLink, QrCode } from "lucide-react";
 
 // Estructura de datos para las opciones
@@ -110,11 +111,11 @@ export default function Home() {
                 <div className="w-full flex flex-col items-center space-y-6">
                   {/* Contenedor del QR Real */}
                   <div className="w-64 h-64 bg-white rounded-xl flex items-center justify-center p-2 border border-border shadow-inner overflow-hidden relative">
-                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                     <img 
+                     <Image 
                        src={selectedOption.qrImageSrc} 
                        alt={`Código QR para ${selectedOption.title}`} 
-                       className="w-full h-full object-contain"
+                       fill
+                       className="object-contain"
                      />
                   </div>
                   
