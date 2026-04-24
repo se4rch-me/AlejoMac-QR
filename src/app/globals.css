@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  :root, .blue-standard, .light, .neutral, .dark, .blue {
+    color-scheme: dark;
+    --background: #02040a;
+    --foreground: #f5f5f7;
+    --card: #060a14;
+    --card-foreground: #f5f5f7;
+    --border: #14213d;
+    --primary: #0071e3;
+    --primary-foreground: #ffffff;
+    --secondary: #0a1124;
+    --secondary-foreground: #f5f5f7;
+    --muted: #0a1124;
+    --muted-foreground: #86868b;
+    --smoke-color: rgba(0, 113, 227, 0.15);
+    --glow-color: rgba(0, 113, 227, 0.2);
+    --glow-hover-color: rgba(0, 113, 227, 0.35);
+  }
+
+  .blue-subtle {
+    color-scheme: dark;
+    --background: #02040a;
+    --foreground: #f5f5f7;
+    --card: #060a14;
+    --card-foreground: #f5f5f7;
+    --border: #14213d;
+    --primary: #0071e3;
+    --primary-foreground: #ffffff;
+    --secondary: #0a1124;
+    --secondary-foreground: #f5f5f7;
+    --muted: #0a1124;
+    --muted-foreground: #86868b;
+    --smoke-color: rgba(0, 113, 227, 0.05);
+    --glow-color: rgba(0, 113, 227, 0.1);
+    --glow-hover-color: rgba(0, 113, 227, 0.2);
+  }
+
+  .blue-intense {
+    color-scheme: dark;
+    --background: #02040a;
+    --foreground: #f5f5f7;
+    --card: #060a14;
+    --card-foreground: #f5f5f7;
+    --border: #14213d;
+    --primary: #0071e3;
+    --primary-foreground: #ffffff;
+    --secondary: #0a1124;
+    --secondary-foreground: #f5f5f7;
+    --muted: #0a1124;
+    --muted-foreground: #86868b;
+    --smoke-color: rgba(0, 113, 227, 0.3);
+    --glow-color: rgba(0, 113, 227, 0.5);
+    --glow-hover-color: rgba(0, 113, 227, 0.7);
+  }
+}
+
+@layer utilities {
+  .neon-card {
+    box-shadow: 0px 0px 4px 2px var(--glow-color);
+  }
+  .neon-card:hover {
+    box-shadow: 0px 0px 12px 5px var(--glow-hover-color);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
