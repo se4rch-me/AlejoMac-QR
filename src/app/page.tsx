@@ -16,6 +16,9 @@ type OptionType = {
   accountInfo?: string;
 };
 
+// Determinar el basePath en tiempo de construcción para producción (GitHub Pages)
+const basePath = process.env.NODE_ENV === 'production' ? '/AlejoMac-QR' : '';
+
 const OPTIONS: OptionType[] = [
   {
     id: "wallets",
@@ -23,7 +26,7 @@ const OPTIONS: OptionType[] = [
     icon: Wallet,
     description: "Nequi, Daviplata, etc.",
     actionType: "qr",
-    qrImageSrc: "/Nequi_Alejo.png",
+    qrImageSrc: `${basePath}/Nequi_Alejo.png`,
     accountInfo: "Nequi: 3144357839",
   },
   {
@@ -32,7 +35,7 @@ const OPTIONS: OptionType[] = [
     icon: Landmark,
     description: "Transferencias bancarias",
     actionType: "qr",
-    qrImageSrc: "/bancolombia_Alejo.png",
+    qrImageSrc: `${basePath}/bancolombia_Alejo.png`,
     accountInfo: "Bancolombia: Luis Huertas",
   },
   {
@@ -41,7 +44,7 @@ const OPTIONS: OptionType[] = [
     icon: HeadphonesIcon,
     description: "Ingreso de equipos y soporte técnico",
     actionType: "both",
-    qrImageSrc: "/ClienteForm_Alejo.png",
+    qrImageSrc: `${basePath}/ClienteForm_Alejo.png`,
     url: "https://script.google.com/macros/s/AKfycbxVHI0Tl-Wl4edJqPrl9uKyhavvmxxRm4dv8Xj8ClaRggNCDHpznFbzwvBqt-_R-vB3iA/exec?page=cliente",
   },
 ];
